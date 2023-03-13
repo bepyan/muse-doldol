@@ -1,5 +1,7 @@
-import { useState } from 'preact/hooks';
-import { BrowserRouter, Route, Routes, useNavigate, useParams } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, useParams } from 'react-router-dom';
+
+import Home from './components/Home';
+import Navbar from './components/Navbar';
 
 export default function App() {
   return (
@@ -11,26 +13,6 @@ export default function App() {
       </Routes>
     </BrowserRouter>
   );
-}
-
-function Navbar() {
-  const [count, setCount] = useState(0);
-  const navigate = useNavigate();
-
-  return (
-    <div>
-      <h2>돌돌말이 김밥</h2>
-      <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
-      <div class="flex items-center gap-2">
-        <button onClick={() => navigate('/')}>home</button>
-        <button onClick={() => navigate('/test')}>test</button>
-      </div>
-    </div>
-  );
-}
-
-function Home() {
-  return <div>home</div>;
 }
 
 function Slug() {
