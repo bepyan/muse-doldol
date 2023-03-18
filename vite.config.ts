@@ -8,6 +8,7 @@ export default defineConfig({
   resolve: {
     alias: {
       react: 'preact/compat',
+      '~': './src/',
     },
   },
 });
